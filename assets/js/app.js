@@ -28,7 +28,6 @@ var chartGroup = svg.append("g")
   .attr("transform", `translate(${chartMargin.left}, ${chartMargin.top})`);
 
 
-
 // Load data from data.csv
 d3.csv("assets/data/data.csv").then(function(smokerData) {
 
@@ -74,7 +73,7 @@ d3.csv("assets/data/data.csv").then(function(smokerData) {
     .attr("fill", "green")
     .attr("opacity", ".6");
 
-    // Step 5.5: Create abbreviations in the circles
+    // Create abbreviations in the circles
     chartGroup.append("g").selectAll("text")
     .data(smokerData)
     .enter()
